@@ -17,3 +17,5 @@ InvitationsSchema = new SimpleSchema({
     }
   }
 });
+
+Invitations.attachSchema(InvitationsSchema);
