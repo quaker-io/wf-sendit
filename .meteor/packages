@@ -14,3 +14,4 @@ iron:router
 cfs:standard-packages
 twbs:bootstrap
 aslagle:reactive-table
+cfs:autoform
