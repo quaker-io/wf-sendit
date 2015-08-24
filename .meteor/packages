@@ -6,3 +6,4 @@
 
 meteor-platform
 cfs:gridfs
+aldeed:simple-schema
