@@ -13,3 +13,4 @@ yogiben:autoform-file
 iron:router
 cfs:standard-packages
 twbs:bootstrap
+aslagle:reactive-table
