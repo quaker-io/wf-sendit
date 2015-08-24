@@ -8,3 +8,4 @@ meteor-platform
 cfs:gridfs
 aldeed:simple-schema
 aldeed:autoform
+aldeed:collection2
