@@ -19,3 +19,12 @@ InvitationsSchema = new SimpleSchema({
 });
 
 Invitations.attachSchema(InvitationsSchema);
+
+Invitations.allow({
+  "insert": function (userId, doc) {
+    return true;
+  },
+  "update": function (userId, doc) {
+    return true;
+  }
+});
