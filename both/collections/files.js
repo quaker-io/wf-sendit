@@ -10,5 +10,9 @@ Files.allow({
   },
   "update": function (userId, doc) {
     return true;
-  }
+  },
+  download: function () {
+    return true;
+  },
+  fetch: null
 });
