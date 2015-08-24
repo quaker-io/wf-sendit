@@ -10,7 +10,7 @@ InvitationsSchema = new SimpleSchema({
     type: String,
     autoform: {
       afFieldInput: {
-        type: "cfs-file",
+        type: "cfs-files",
         collection: "files",
         label: "Choose a file"
       }
