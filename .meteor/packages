@@ -9,7 +9,6 @@ cfs:gridfs
 aldeed:simple-schema
 aldeed:autoform
 aldeed:collection2
-yogiben:autoform-file
 iron:router
 cfs:standard-packages
 twbs:bootstrap
