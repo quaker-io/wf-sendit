@@ -3,7 +3,7 @@ Invitations = new Mongo.Collection("invitations");
 InvitationsSchema = new SimpleSchema({
   emails: {
     type: [String],
-    label: "E-mail address(es)",
+    label: "E-mail address",
     regEx: SimpleSchema.RegEx.Email
   },
   file: {
