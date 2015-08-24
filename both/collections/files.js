@@ -3,3 +3,9 @@ Files = new FS.Collection("files", {
     new FS.Store.GridFS("files", {})
   ]
 });
+
+Files.allow({
+  "insert": function (userId, doc) {
+    return true;
+  }
+});
