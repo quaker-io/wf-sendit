@@ -10,3 +10,4 @@ aldeed:simple-schema
 aldeed:autoform
 aldeed:collection2
 yogiben:autoform-file
+iron:router
