@@ -10,7 +10,11 @@ Router.route('/view', function () {
 
 Router.route('/invitation/:_id', function () {
   this.layout('mainLayout');
-  this.render('viewSingleInvitation');
+  this.render('viewSingleInvitation', {
+    data: function () {
+      return Invitations.findOne({_id: this.params._id});
+    }
+  });
 },
 {
   name: 'viewSingleInvitation'
