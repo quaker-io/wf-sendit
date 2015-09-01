@@ -6,13 +6,13 @@ InvitationsSchema = new SimpleSchema({
     label: "E-mail address",
     regEx: SimpleSchema.RegEx.Email
   },
-  fileId: {
-    type: String,
+  fileIds: {
+    type: [String],
     autoform: {
       afFieldInput: {
         type: "cfs-files",
         collection: "files",
-        label: "Choose a file"
+        label: "Choose one or more files"
       }
     }
   }
