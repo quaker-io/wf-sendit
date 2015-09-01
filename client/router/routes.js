@@ -11,9 +11,13 @@ Router.route('/view', function () {
 Router.route('/invitation/:_id', function () {
   this.layout('mainLayout');
   this.render('viewSingleInvitation', {
+    waitOn: function () {
+      return Meteor.subscribe('singleInvitation', this.params._id);
+    },
     data: function () {
       return Invitations.findOne({_id: this.params._id});
-    }
+    },
+    loadingTemplate: 'spinner',
   });
 },
 {
