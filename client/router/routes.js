@@ -17,7 +17,7 @@ Router.route('/invitation/:_id', function () {
     data: function () {
       return Invitations.findOne({_id: this.params._id});
     },
-    loadingTemplate: 'spinner',
+    loadingTemplate: 'spinner'
   });
 },
 {
