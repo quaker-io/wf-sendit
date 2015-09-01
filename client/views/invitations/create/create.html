@@ -2,5 +2,9 @@
   <div class="page-heading">
     <h1 class="page-header">Create invitation</h1>
   </div>
-    {{> quickForm collection="Invitations" type="insert" id="createInvitation" }}
+  {{#autoForm id="insertForm" type="insert" collection="Invitations"}}
+  {{> afQuickField name="emails"}}
+  {{> afQuickField name="fileId" type="cfs-file" collection="files"}}
+  <button type="submit">Submit</button>
+  {{/autoForm}}
 </template>
