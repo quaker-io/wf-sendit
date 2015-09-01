@@ -7,4 +7,10 @@ Template.viewSingleInvitation.created = function () {
 
   // Subscribe to files for this invitation
   instance.subscribe('invitationFiles', instance.fileIds);
-}
+};
+
+Template.viewSingleInvitation.helpers({
+  'files': function () {
+    return Files.find().fetch();
+  }
+});
