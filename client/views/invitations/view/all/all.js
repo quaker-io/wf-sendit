@@ -8,6 +8,19 @@ Template.viewAllInvitations.created = function () {
 Template.viewAllInvitations.helpers({
   "invitations": function () {
     return Invitations.find().fetch();
+  },
+  "tableSettings": function () {
+    // Create a settings object
+    var settings = {
+      fields: [
+        {key: "_id", label: "View", tmpl: Template.viewButton },
+        {key: "title", label: "Title"},
+        {key: "message", label: "Message"},
+        {key: "emails", label: "Emails"},
+      ]
+    };
+
+    return settings;
   }
 });
 
