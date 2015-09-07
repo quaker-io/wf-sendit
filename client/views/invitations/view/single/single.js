@@ -3,7 +3,7 @@ Template.viewSingleInvitation.created = function () {
   var instance = this;
 
   // Get the current invitation ID
-  var invitationId = Router.current().params.invitationId;
+  var invitationId = Router.current().params._id;
 
   // Subscribe to files for this invitation
   instance.subscribe('invitationComposite', invitationId);
