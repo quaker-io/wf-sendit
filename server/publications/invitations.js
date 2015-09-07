@@ -10,10 +10,9 @@ Meteor.publish("singleInvitation", function (invitationId) {
 Meteor.publishComposite('invitationComposite', function (invitationId) {
   return {
     find: function () {
-      console.log(invitationId);
       // Get specific invitation by ID
       var invitations = Invitations.find(invitationId);
-      console.log(invitations.count());
+
       // Find a specific invitation
       return invitations;
     },
