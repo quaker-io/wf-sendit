@@ -3,6 +3,7 @@
     <h1 class="page-header">Create invitation</h1>
   </div>
   {{#autoForm id="insertForm" type="insert" collection="Invitations"}}
+  {{> afQuickField name="title" autofocus="true" }}
   {{> afQuickField name="emails"}}
   {{> afQuickField name="fileIds" type="cfs-files" collection="files"}}
   <button type="submit">Submit</button>
