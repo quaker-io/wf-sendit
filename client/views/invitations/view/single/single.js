@@ -10,6 +10,10 @@ Template.viewSingleInvitation.created = function () {
 };
 
 Template.viewSingleInvitation.helpers({
+  "invitation": function () {
+    // Get invitation from template subscription
+    return Invitations.findOne();
+  },
   'files': function () {
     return Files.find().fetch();
   }
