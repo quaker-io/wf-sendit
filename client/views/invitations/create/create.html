@@ -2,7 +2,7 @@
   <div class="page-heading">
     <h1 class="page-header">Create invitation</h1>
   </div>
-  {{#autoForm id="insertForm" type="insert" collection="Invitations"}}
+  {{#autoForm id="createInvitationForm" type="insert" collection="Invitations"}}
   {{> afQuickField name="title" autofocus="true" }}
   {{> afQuickField name="message" rows=5 id="message" }}
   {{> afQuickField name="emails"}}
