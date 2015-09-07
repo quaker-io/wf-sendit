@@ -1,6 +1,8 @@
 <template name="viewSingleInvitation">
-  <h1>Single Invitation view</h1>
    {{#if Template.subscriptionsReady }}
+  {{# with invitation }}
+  <h1>{{ title }}</h1>
+  {{/ with }}
   {{# each files }}
   <button class="btn btn-primary btn-lg" onClick="location.href='{{ url }}'">Download</button>
   {{/ each }}
