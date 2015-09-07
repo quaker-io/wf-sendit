@@ -8,17 +8,9 @@ Router.route('/view', function () {
   this.render('viewAllInvitations');
 });
 
-Router.route('/invitation/:_id', function () {
+Router.route('/invitation/:invitationId', function () {
   this.layout('mainLayout');
-  this.render('viewSingleInvitation', {
-    waitOn: function () {
-      return Meteor.subscribe('singleInvitation', this.params._id);
-    },
-    data: function () {
-      return Invitations.findOne({_id: this.params._id});
-    },
-    loadingTemplate: 'spinner'
-  });
+  this.render('viewSingleInvitation');
 },
 {
   name: 'viewSingleInvitation'
