@@ -2,11 +2,11 @@ Template.viewSingleInvitation.created = function () {
   // Get reference to template instance
   var instance = this;
 
-  // Get File IDs from template instance
-  instance.fileIds = instance.data.fileIds;
+  // Get the current invitation ID
+  var invitationId = Router.current().params.invitationId;
 
   // Subscribe to files for this invitation
-  instance.subscribe('invitationFiles', instance.fileIds);
+  instance.subscribe('invitationComposite', invitationId);
 };
 
 Template.viewSingleInvitation.helpers({
