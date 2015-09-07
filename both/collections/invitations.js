@@ -1,6 +1,10 @@
 Invitations = new Mongo.Collection("invitations");
 
 InvitationsSchema = new SimpleSchema({
+  title: {
+    type: String,
+    label: "Title"
+  },
   emails: {
     type: [String],
     label: "E-mail address",
