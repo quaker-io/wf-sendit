@@ -8,7 +8,7 @@ Router.route('/view', function () {
   this.render('viewAllInvitations');
 });
 
-Router.route('/invitation/:invitationId', function () {
+Router.route('/invitation/:_id', function () {
   this.layout('mainLayout');
   this.render('viewSingleInvitation');
 },
