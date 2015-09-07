@@ -5,6 +5,11 @@ InvitationsSchema = new SimpleSchema({
     type: String,
     label: "Title"
   },
+  message: {
+    type: String,
+    label: "Message",
+    optional: true
+  },
   emails: {
     type: [String],
     label: "E-mail address",
