@@ -26,7 +26,7 @@ Meteor.methods({
     // Get the application base url, without trailing slash
     var baseUrl;
 
-    if (absolute.substr(-1) === '/') {
+    if (absoluteUrl.substr(-1) === '/') {
         baseUrl = absoluteUrl.substr(0, str.length - 1);
     } else {
       baseUrl = absoluteUrl;
