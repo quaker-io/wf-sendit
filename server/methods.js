@@ -27,7 +27,7 @@ Meteor.methods({
     var baseUrl;
 
     if (absoluteUrl.substr(-1) === '/') {
-        baseUrl = absoluteUrl.substr(0, str.length - 1);
+        baseUrl = absoluteUrl.substr(0, absoluteUrl.length - 1);
     } else {
       baseUrl = absoluteUrl;
     }
