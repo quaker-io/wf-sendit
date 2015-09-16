@@ -5,9 +5,9 @@
   {{#autoForm id="createInvitationForm" type="insert" collection="Invitations"}}
   {{> afQuickField name="title" autofocus="true" }}
   <p class="help-block">Enter a title to appear on the invitation page.</p>
-  {{> afQuickField name="message" rows=5 id="message" }}
+  {{> afQuickField name="message" rows=3 id="message" }}
   <p class="help-block">Enter a message to appear on the invitation page.</p>
-  {{> afQuickField name="emails" rows=5 type="textarea"}}
+  {{> afQuickField name="emails" rows=3 type="textarea"}}
   <p class="help-block">Enter one or more email addresses, one address per line without trailing commas.</p>
   {{> afQuickField name="fileIds" type="cfs-files" collection="files"}}
   <p class="help-block">Select one or more files to attach to this invitation.</p>
