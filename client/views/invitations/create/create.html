@@ -4,6 +4,7 @@
   </div>
   {{#autoForm id="createInvitationForm" type="insert" collection="Invitations"}}
   {{> afQuickField name="title" autofocus="true" }}
+  <p class="help-block">Enter a title to appear on the invitation page.</p>
   {{> afQuickField name="message" rows=5 id="message" }}
   <p class="help-block">Enter a message to appear on the invitation page.</p>
   {{> afQuickField name="emails" rows=5 type="textarea"}}
