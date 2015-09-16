@@ -5,7 +5,7 @@
   {{#autoForm id="createInvitationForm" type="insert" collection="Invitations"}}
   {{> afQuickField name="title" autofocus="true" }}
   {{> afQuickField name="message" rows=5 id="message" }}
-  {{> afQuickField name="emails"}}
+  {{> afQuickField name="emails" rows=5 type="textarea"}}
   {{> afQuickField name="fileIds" type="cfs-files" collection="files"}}
   <button type="submit">Submit</button>
   {{/autoForm}}
