@@ -12,7 +12,7 @@ InvitationsSchema = new SimpleSchema({
   },
   emails: {
     type: [String],
-    label: "E-mail address",
+    label: "E-mail address(es)",
     regEx: SimpleSchema.RegEx.Email
   },
   fileIds: {
