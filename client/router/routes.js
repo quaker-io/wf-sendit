@@ -3,6 +3,11 @@ Router.route('/', function () {
   this.render('createInvitation');
 });
 
+Router.route('/settings', function () {
+  this.layout('mainLayout');
+  this.render('settings');
+});
+
 Router.route('/view', function () {
   this.layout('mainLayout');
   this.render('viewAllInvitations');
