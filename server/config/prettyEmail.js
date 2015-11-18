@@ -5,6 +5,6 @@ PrettyEmail.options = {
   companyUrl: 'https://westernfriend.org',
 //  companyAddress: '123 Street, ZipCode, City, Country',
 //  companyTelephone: '+1234567890',
-  companyEmail: 'editor@westernfriend.org,
+  companyEmail: 'editor@westernfriend.org',
   siteName: 'WF-SendIt'
 };
