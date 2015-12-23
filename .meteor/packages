@@ -18,7 +18,6 @@ reywood:publish-composite
 email
 underscore
 cunneen:mailgun
-yogiben:pretty-email
 standard-minifiers
 meteor-base
 mobile-experience
