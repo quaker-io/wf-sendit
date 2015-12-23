@@ -10,6 +10,13 @@
     <span class="help-block">{{{afFieldMessage name='brandingImageId'}}}</span>
     {{/if}}
   </div>
+  <div class="form-group {{#if afFieldIsInvalid name='brandingImageId'}}has-error{{/if}}">
+    <label class="control-label">{{afFieldLabelText name='firstName'}}</label>
+    {{> afFieldInput name='baseUrl'}}
+    {{#if afFieldIsInvalid name='baseUrl'}}
+    <span class="help-block">{{{afFieldMessage name='baseUrl'}}}</span>
+    {{/if}}
+  </div>
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="reset" class="btn btn-default">Reset Form</button>
