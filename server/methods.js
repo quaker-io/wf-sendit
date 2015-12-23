@@ -42,7 +42,11 @@ Meteor.methods({
     invitation.linkText = "View your invitation at the following link:";
 
     // Construct an invitation URL
-    invitation.url = protocol+ host + "/invitation/" + invitationId;
+    invitation.url = protocol + host + "/invitation/" + invitationId;
+
+    // Insert logo URL into invitation
+    var logoUrl = Meteor.call("getLogoUrl");
+    invitation.logoUrl = protocol + host + logoUrl;
 
     // Get invitation title
     var subject = invitation.title;
