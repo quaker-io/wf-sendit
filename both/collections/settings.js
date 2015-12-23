@@ -1,14 +1,21 @@
 Settings = new Mongo.Collection("settings");
 
-Settings.attachSchema({
+var SettingsSchema = new SimpleSchema({
   brandingImageId: {
     type: String,
+    label: "Upload logo",
     autoform: {
       type: "cfs-file",
       collection: "files"
     }
+  },
+  baseUrl: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Url
   }
 });
+
+Settings.attachSchema(SettingsSchema);
 
 Settings.allow({
   insert: function () {
