@@ -29,8 +29,8 @@ Meteor.methods({
     // Get host from base URL
     var host = baseUrl.host();
 
-    // Construct an invitation URL
-    var invitationUrl = host + "/invitation/" + invitationId;
+    // Get protocol from base URL
+    var protocol = baseUrl.protocol() + "://"
 
     // Construct a from address
     var fromAddress = 'contact@' + host;
@@ -39,7 +39,10 @@ Meteor.methods({
     var invitation = Invitations.findOne(invitationId);
 
     // Create a basic message text
-    invitation.message = "You have an invitation at " + invitationUrl;
+    invitation.linkText = "View your invitation at the following link:";
+
+    // Construct an invitation URL
+    invitation.url = protocol+ host + "/invitation/" + invitationId;
 
     // Get invitation title
     var subject = invitation.title;
