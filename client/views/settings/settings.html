@@ -1,7 +1,10 @@
 <template name="settings">
   <h1>Settings</h1>
   {{# if settings }}
-  <p>Settings exist!</p>
+  {{#if logo }}
+    <h2>Current logo</h2>
+    <img src="{{ logo.url }}" />
+  {{/ if }}
   {{#autoForm id="settings-form" type="update" collection="Settings" doc=settings }}
 
     {{> afQuickField name='brandingImageId'}}
