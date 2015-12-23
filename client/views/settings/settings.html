@@ -3,20 +3,11 @@
   {{# if settings }}
   <p>Settings exist!</p>
   {{#autoForm id="settings-form" type="update" collection="Settings" doc=settings }}
-  <div class="form-group {{#if afFieldIsInvalid name='brandingImageId'}}has-error{{/if}}">
-    <label class="control-label">{{afFieldLabelText name='firstName'}}</label>
-    {{> afFieldInput name='brandingImageId'}}
-    {{#if afFieldIsInvalid name='brandingImageId'}}
-    <span class="help-block">{{{afFieldMessage name='brandingImageId'}}}</span>
-    {{/if}}
-  </div>
-  <div class="form-group {{#if afFieldIsInvalid name='brandingImageId'}}has-error{{/if}}">
-    <label class="control-label">{{afFieldLabelText name='firstName'}}</label>
-    {{> afFieldInput name='baseUrl'}}
-    {{#if afFieldIsInvalid name='baseUrl'}}
-    <span class="help-block">{{{afFieldMessage name='baseUrl'}}}</span>
-    {{/if}}
-  </div>
+
+    {{> afQuickField name='brandingImageId'}}
+
+    {{> afQuickField name='baseUrl'}}
+
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="reset" class="btn btn-default">Reset Form</button>
@@ -25,13 +16,11 @@
   {{ else }}
   <p>No settings exist!</p>
   {{#autoForm id="settings-form" type="insert" collection="Settings"}}
-  <div class="form-group {{#if afFieldIsInvalid name='brandingImageId'}}has-error{{/if}}">
-    <label class="control-label">{{afFieldLabelText name='firstName'}}</label>
-    {{> afFieldInput name='brandingImageId'}}
-    {{#if afFieldIsInvalid name='brandingImageId'}}
-    <span class="help-block">{{{afFieldMessage name='brandingImageId'}}}</span>
-    {{/if}}
-  </div>
+
+  {{> afQuickField name='brandingImageId'}}
+
+  {{> afQuickField name='baseUrl'}}
+
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="reset" class="btn btn-default">Reset Form</button>
