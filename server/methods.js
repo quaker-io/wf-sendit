@@ -20,14 +20,11 @@ Meteor.methods({
     check([invitationId], [String]);
     this.unblock();
 
-    // Get base URL from settings
-    var settings = Settings.findOne({}, {fields: {baseUrl: 1}});
-
     // Get the application base url, without trailing slash
-    var baseUrl = new URI(settings.baseUrl);
+    var baseUrl = new URI(Meteor.absoluteUrl());
 
     // Get host from base URL
-    var host = baseUrl.host();
+    var host = baseUrl.hostname();
 
     // Get protocol from base URL
     var protocol = baseUrl.protocol() + "://"
