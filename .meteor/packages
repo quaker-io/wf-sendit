@@ -35,3 +35,4 @@ check
 meteorhacks:ssr
 olragon:uri-js
 ecmascript
+percolate:migrations
