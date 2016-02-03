@@ -4,20 +4,22 @@ Migrations.add({
   up: function() {
     let settings = Settings.findOne();
 
-    let settingsId = settings._id;
+    if (settings) {
+      let settingsId = settings._id;
 
-    let settingsHasBaseUrl = _.has(settings, "baseUrl");
+      let settingsHasBaseUrl = _.has(settings, "baseUrl");
 
-    if (settingsHasBaseUrl) {
-      // Delete existing settings object
-      Settings.remove(settingsId);
+      if (settingsHasBaseUrl) {
+        // Delete existing settings object
+        Settings.remove(settingsId);
 
-      // Remove base url and _id fields
-      delete settings["baseUrl"];
-      delete settings["_id"];
+        // Remove base url and _id fields
+        delete settings["baseUrl"];
+        delete settings["_id"];
 
-      // Insert modified settings object
-      Settings.insert(settings);
+        // Insert modified settings object
+        Settings.insert(settings);
+      }
     }
   }
 });
