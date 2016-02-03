@@ -1,0 +1,6 @@
+Meteor.startup(function(){
+    Meteor.Mailgun.config({
+      username: 'YOUR_MAILGUN_USERNAME',
+      password: 'YOUR_MAILGUN_PASSWORD'
+    });
+  });
