@@ -8,10 +8,6 @@ var SettingsSchema = new SimpleSchema({
       type: "cfs-file",
       collection: "files"
     }
-  },
-  baseUrl: {
-    type: String,
-    regEx: SimpleSchema.RegEx.Url
   }
 });
 
